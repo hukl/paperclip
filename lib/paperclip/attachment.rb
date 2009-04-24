@@ -301,7 +301,7 @@ module Paperclip
     def normalize_style_definition #:nodoc:
       @styles.each do |name, args|
         unless args.is_a? Hash
-          dimensions, format = *args
+          dimensions, format = args
           @styles[name]      = {
             :processors      => @processors,
             :geometry        => dimensions,
